@@ -104,7 +104,7 @@ theme: butterfly
 deploy:
   type: git
   repository: root@172.17.0.2:/root/blog.git
-  branch: hexo
+  branch: master
 live2d:
   enable: true
   scriptFrom: local # 默认
@@ -114,8 +114,8 @@ live2d:
     use: live2d-widget-model-tororo  #模型选择
   display:
     position: right  #模型位置
-    width: 150       #模型宽度
-    height: 300      #模型高度
+    width: 180       #模型宽度
+    height: 320      #模型高度
     hOffset: 20
     vOffset: -20
   mobile:
