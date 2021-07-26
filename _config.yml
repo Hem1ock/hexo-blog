@@ -9,11 +9,11 @@ description: ''
 keywords:
 author: Hem1ock
 language: zh-CN
-timezone: ''
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: http://blog.hem1ock.com
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -103,5 +103,5 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: git@github.com:Hem1ock/hexo-blog.git
-  branch: main
+  repository: root@172.17.0.2:/root/blog.git
+  branch: master
