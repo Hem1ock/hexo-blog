@@ -4,8 +4,8 @@
 
 # Site
 title: Hem1ock's 博客
-subtitle: '博客'
-description: ''
+subtitle: '娱乐致死'
+description: '本博客主要记录和分享本人在<br>信息安全路上的学习梳理和总结'
 keywords:
 author: Hem1ock
 language: zh-CN
@@ -120,3 +120,23 @@ live2d:
     vOffset: -20
   mobile:
     show: true      #是否在手机端显示
+
+douban: 
+  user: 167815468   #这个需要修改为你个人的id  
+  builtin: false   #如果想生成豆瓣页面，这个需要设置为true
+  book: 
+    title: 'This is my book title' 
+    quote: 'This is my book quote' 
+  movie: 
+    title: '梦想与现实的碰撞'
+    quote: 'This is my movie quote' 
+  game: 
+    title: 'This is my game title' 
+    quote: 'This is my game quote' 
+  timeout: 10000
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
