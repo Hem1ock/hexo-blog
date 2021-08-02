@@ -1,12 +1,18 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hem1ock's 博客 - 娱乐致死</title><meta name="author" content="Hem1ock"><meta name="copyright" content="Hem1ock"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="本博客主要记录和分享本人在信息安全路上的学习梳理和总结">
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hem1ock's 博客 - 娱乐致死</title><meta name="keywords" content="信息安全,WEB,攻防,渗透,红蓝队,网络安全"><meta name="author" content="Hem1ock"><meta name="copyright" content="Hem1ock"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="本博客主要记录本人在信息安全路上的学习梳理和总结">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hem1ock&#39;s 博客">
 <meta property="og:url" content="http://blog.hem1ock.com/index.html">
 <meta property="og:site_name" content="Hem1ock&#39;s 博客">
-<meta property="og:description" content="本博客主要记录和分享本人在信息安全路上的学习梳理和总结">
+<meta property="og:description" content="本博客主要记录本人在信息安全路上的学习梳理和总结">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2021/07/26/5VhrIil9acJ7HGb.png">
 <meta property="article:author" content="Hem1ock">
+<meta property="article:tag" content="信息安全">
+<meta property="article:tag" content="WEB">
+<meta property="article:tag" content="攻防">
+<meta property="article:tag" content="渗透">
+<meta property="article:tag" content="红蓝队">
+<meta property="article:tag" content="网络安全">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.loli.net/2021/07/26/5VhrIil9acJ7HGb.png"><link rel="shortcut icon" href="https://i.loli.net/2021/07/27/Nwn8JpcQ5EKhoVU.png"><link rel="canonical" href="http://blog.hem1ock.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
@@ -55,7 +61,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2021-07-28 00:11:38'
+  postUpdate: '2021-08-02 22:19:56'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -138,44 +144,72 @@
         }
       }
     
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
     const detectApple = () => {
       if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
         document.documentElement.classList.add('apple')
       }
     }
     detectApple()
-    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body><a href="javascript:void(0);" onclick="preloader.endLoading();" title="点击跳过动画"><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="wizard-scene"><div class="wizard-objects"><div class="wizard-square"></div><div class="wizard-circle"></div><div class="wizard-triangle"></div></div><div class="wizard"><div class="wizard-body"></div><div class="wizard-right-arm"><div class="wizard-right-hand"></div></div><div class="wizard-left-arm"><div class="wizard-left-hand"></div></div><div class="wizard-head"><div class="wizard-beard"></div><div class="wizard-face"><div class="wizard-adds"></div></div><div class="wizard-hat"><div class="wizard-hat-of-the-hat"></div><div class="wizard-four-point-star --first"></div><div class="wizard-four-point-star --second"></div><div class="wizard-four-point-star --third"></div></div></div></div></div></div></a><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/07/26/5VhrIil9acJ7HGb.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hem1ock's 博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hem1ock's 博客</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/Hem1ock" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:hem1ock@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/07/27/hello-world/" title="Hello World">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/07/27/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-07-27T15:53:51.040Z" title="发表于 2021-07-27 23:53:51">2021-07-27</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a href="/2021/07/27/hello-world/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2021/07/27/hello-world/" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/lib/gitcalendar.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body><a href="javascript:void(0);" onclick="preloader.endLoading();" title="点击跳过动画"><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="wizard-scene"><div class="wizard-objects"><div class="wizard-square"></div><div class="wizard-circle"></div><div class="wizard-triangle"></div></div><div class="wizard"><div class="wizard-body"></div><div class="wizard-right-arm"><div class="wizard-right-hand"></div></div><div class="wizard-left-arm"><div class="wizard-left-hand"></div></div><div class="wizard-head"><div class="wizard-beard"></div><div class="wizard-face"><div class="wizard-adds"></div></div><div class="wizard-hat"><div class="wizard-hat-of-the-hat"></div><div class="wizard-four-point-star --first"></div><div class="wizard-four-point-star --second"></div><div class="wizard-four-point-star --third"></div></div></div></div></div></div></a><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/07/26/5VhrIil9acJ7HGb.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://i.loli.net/2021/07/30/waAT7nDV4rZvdxp.gif')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hem1ock's 博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hem1ock's 博客</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/Hem1ock" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:hem1ock@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/posts/28839.html" title="博客搭建 - 基于Docker+Hexo+Nginx+Butterfly">     <img class="post_bg" src="https://i.loli.net/2021/07/30/waAT7nDV4rZvdxp.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="博客搭建 - 基于Docker+Hexo+Nginx+Butterfly"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/28839.html" title="博客搭建 - 基于Docker+Hexo+Nginx+Butterfly">博客搭建 - 基于Docker+Hexo+Nginx+Butterfly</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-07-28T04:00:13.000Z" title="发表于 2021-07-28 12:00:13">2021-07-28</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Hexo%E5%8D%9A%E5%AE%A2%E2%80%8B/">Hexo博客​</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Hexo/">Hexo</a></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a href="/posts/28839.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/posts/28839.html" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">前言
+​        本博客是基于Hexo框架搭建，用Buterfly主题进行美化。Hexo是基于Node.js通过将Markdown文章渲染成静态网页，非常方便、简洁。hexo-theme-butterfly是基于hexo-theme-melody 的基础上进行开发的。考虑到环境搭建方便，在云主机上使用了Docker+Nginx进行部署。在搭建过程中经历了许多坎坷 ，有些问题没有记录下来，也参考了其他许多博主的教程。
 
-More info: Writing
-Run server1$ hexo server
+参考教程：
 
-More info: Server
-Generate static files1$ hexo generate
 
-More info: Generating
-Deploy to remote sites1$ hexo deploy
-
-More info: Deployment
-</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/07/27/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80/" title="无题">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/07/27/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80/" title="无题">无题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-07-27T15:53:51.040Z" title="发表于 2021-07-27 23:53:51">2021-07-27</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a href="/2021/07/27/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2021/07/27/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80/" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">[TOC]
-渗透测试基础专业术语（黑话）
-弱口令（weak password）：即强度不够，容易被破译的密码，多为简单的数字、键盘临近键，如123，abc这样的口令（密码）。
-
-脱库：脱库本来是数据库领域的术语，指从数据库中导出数据。在网络攻击领域，它被用来指网站遭到入侵后，黑客窃取其数据库文件。
-
-撞库：撞库是黑客通过收集互联网已泄露的用户和密码信息，生成对应的字典表，尝试批量登陆其他网站后，得到一系列可以登录的用户。很多用户在不同网站使用的是相同的帐号密码，因此黑客可以通过获取用户在A网站的账户从而尝试登录B网址，这就可以理解为撞库攻击。
-
-木马：就是那些表面上伪装成了正常的程序，但是当这些程序运行时，就会获取系统的整个控制权限。
-
-肉鸡：所谓“肉鸡”是一种很形象的比喻，比喻那些可以被攻击者控制的电脑、手机、服务器或者其他摄像头、路由器等智能设备，用于发动网络攻击。
+作者
+链接
 
 
 
-抓鸡：即设法控制电脑，将其沦为肉鸡。
+Jerry
+Butterfly官方文档
 
-跳板：一个具有辅助作用的机器，利用这个主机作为一个间接工具，来入侵其他主机，一般和肉鸡连用。
 
-网马 网页木马：就是在网页中植入木马，当打开网页的时候就运行了木马程序。表面 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/07/25/my-hexo/" title="my-hexo">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="my-hexo"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/07/25/my-hexo/" title="my-hexo">my-hexo</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-07-25T17:20:44.000Z" title="发表于 2021-07-26 01:20:44">2021-07-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a href="/2021/07/25/my-hexo/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2021/07/25/my-hexo/" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content"></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/07/26/5VhrIil9acJ7HGb.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Hem1ock</div><div class="author-info__description">本博客主要记录和分享本人在<br>信息安全路上的学习梳理和总结</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Hem1ock"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Hem1ock" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:hem1ock@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎各位师傅批评指正嘿嘿</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/07/27/hello-world/" title="Hello World"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2021/07/27/hello-world/" title="Hello World">Hello World</a><time datetime="2021-07-27T15:53:51.040Z" title="发表于 2021-07-27 23:53:51">2021-07-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/27/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80/" title="无题"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2021/07/27/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80/" title="无题">无题</a><time datetime="2021-07-27T15:53:51.040Z" title="发表于 2021-07-27 23:53:51">2021-07-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/25/my-hexo/" title="my-hexo"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="my-hexo"/></a><div class="content"><a class="title" href="/2021/07/25/my-hexo/" title="my-hexo">my-hexo</a><time datetime="2021-07-25T17:20:44.000Z" title="发表于 2021-07-26 01:20:44">2021-07-26</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">七月 2021</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">3</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-05-25T22:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">16.2k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-07-27T16:11:38.627Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021  <i id="heartbeat" class="fa fas fa-heartbeat"></i> Hem1ock</div><div class="footer_custom_text"><p><a style="margin-inline:5px" target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><a style="margin-inline:5px" target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><a style="margin-inline:5px" target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a><a style="margin-inline:5px" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><script async="async">var preloader = {
+Akilar
+Butterfly 主题美化日记
+
+
+过客～励む
+Hexo+github 搭建博客 (超级详细版，精细入微)
+
+
+唐先森の博客
+Hexo+Butterfly主题美化
+
+
+小冰博客
+小冰插件包 butterfly-orchid 1.0
+
+
+Hugh_Dong
+「Docker」配置Hexo+Git+Nginx
+
+
+因特马
+如何搭建自己的博客
+
+
+
+     如有遗漏文章注明出处，请联系我添加
+
+博客搭建
+主机环境信息：
+
+Ubuntu
+Git v2.22.0
+npm v6.14. ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/07/26/5VhrIil9acJ7HGb.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Hem1ock</div><div class="author-info__description">本博客主要记录本人在<br>信息安全路上的学习梳理和总结</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Hem1ock"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Hem1ock" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:hem1ock@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎各位师傅批评指正嘿嘿</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/28839.html" title="博客搭建 - 基于Docker+Hexo+Nginx+Butterfly"><img src="https://i.loli.net/2021/07/30/waAT7nDV4rZvdxp.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="博客搭建 - 基于Docker+Hexo+Nginx+Butterfly"/></a><div class="content"><a class="title" href="/posts/28839.html" title="博客搭建 - 基于Docker+Hexo+Nginx+Butterfly">博客搭建 - 基于Docker+Hexo+Nginx+Butterfly</a><time datetime="2021-07-28T04:00:13.000Z" title="发表于 2021-07-28 12:00:13">2021-07-28</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Hexo%E5%8D%9A%E5%AE%A2%E2%80%8B/"><span class="card-category-list-name">Hexo博客​</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Hexo/" style="font-size: 1.15em; color: rgb(193, 83, 43)">Hexo</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">七月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">1</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-05-25T22:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">1.8k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-08-02T14:19:56.878Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://i.loli.net/2021/07/30/waAT7nDV4rZvdxp.gif')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021  <i id="heartbeat" class="fa fas fa-heartbeat"></i> Hem1ock</div><div class="footer_custom_text"><p><a style="margin-inline:5px" target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><a style="margin-inline:5px" target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><a style="margin-inline:5px" target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a><a style="margin-inline:5px" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><script async="async">var preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
@@ -205,17 +239,24 @@ setTimeout(function(){preloader.endLoading();}, 3000);</script><div class="js-pj
 
   window.pjax ? loadValine() : window.addEventListener('load', loadValine)
 })()</script><script>function subtitleType () {
-  if (true) { 
-    var typed = new Typed("#subtitle", {
-      strings: "毁掉我们的不是我们所憎恨的东西，而恰恰是我们所热爱的东西,Destroy our is not something we hate, and it is precisely what we love.".split(","),
-      startDelay: 300,
-      typeSpeed: 150,
-      loop: true,
-      backSpeed: 50
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        var from = '出自 ' + data.from
+        var sub = "".length == 0 ? new Array() : "".split(',')
+        var both = sub.unshift(data.hitokoto, from)
+        var typed = new Typed('#subtitle', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('subtitle').innerHTML = data.hitokoto
+      }
     })
-  } else {
-    document.getElementById("subtitle").innerHTML = '毁掉我们的不是我们所憎恨的东西，而恰恰是我们所热爱的东西'
-  }
 }
 
 if (true) {
@@ -226,10 +267,15 @@ if (true) {
   }
 } else {
   subtitleType()
-}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+}
+</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
   function butterfly_clock_injector_config(){
     var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
-    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="/img/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://i.loli.net/2021/07/30/gJeWHFhtlZDo87x.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
     console.log('已挂载butterfly_clock')
     parent_div_git.insertAdjacentHTML("afterbegin",item_html)
     }
@@ -250,4 +296,37 @@ if (true) {
   else if (epage === cpage){
     butterfly_clock_injector_config();
   }
-  </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.js"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":180,"height":320,"hOffset":20,"vOffset":-20},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script></body></html>
+  </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+                        function gitcalendar_injector_config(){
+                          var parent_div_git = document.getElementById('recent-posts');
+                          var item_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+                          parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+                          console.log('已挂载gitcalendar')
+                          }
+
+                        if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+                            gitcalendar_injector_config()
+                            GitCalendarInit("https://python-github-calendar-api-zfour.vercel.app/api?Hem1ock",['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f'],'Hem1ock')
+                        }
+                      </script>
+  <script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script>
+  <script data-pjax>
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://python-gitee-calendar-api.vercel.app/api?hem1ock";
+            var git_color =['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f'];
+            var git_user ="hem1ock";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/about/'){
+                console.log('已挂载github calendar')
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style></style><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":180,"height":320,"hOffset":20,"vOffset":-20},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script></body></html>

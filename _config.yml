@@ -5,8 +5,8 @@
 # Site
 title: Hem1ock's 博客
 subtitle: '娱乐致死'
-description: '本博客主要记录和分享本人在<br>信息安全路上的学习梳理和总结'
-keywords:
+description: '本博客主要记录本人在<br>信息安全路上的学习梳理和总结'
+keywords: [信息安全, WEB, 攻防, 渗透, 红蓝队, 网络安全] 
 author: Hem1ock
 language: zh-CN
 timezone: 'Asia/Shanghai'
@@ -14,13 +14,21 @@ timezone: 'Asia/Shanghai'
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://blog.hem1ock.com
-permalink: :year/:month/:day/:title/
+permalink: posts/:abbrlink.html  # 此处可以自己设置，也可以直接使用 :/abbrlink
+#permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
+#skip_render: test/* 单个文件夹下全部文件
+#skip_render: test/*.md 单个文件夹下指定类型文件
+#skip_render: test/** 单个文件夹下全部文件以及子目录
+#不渲染 html 文件
+#---
+#layout: false
+#---
 source_dir: source
 public_dir: public
 tag_dir: tags
@@ -28,7 +36,9 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: 
+
+
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -123,20 +133,46 @@ live2d:
 
 douban: 
   user: 167815468   #这个需要修改为你个人的id  
-  builtin: false   #如果想生成豆瓣页面，这个需要设置为true
+  builtin: true   #如果想生成豆瓣页面，这个需要设置为true
   book: 
-    title: 'This is my book title' 
-    quote: 'This is my book quote' 
+    title: '书单' 
+    quote: '生活中总有些东西会让你一见钟情' 
   movie: 
-    title: '梦想与现实的碰撞'
-    quote: 'This is my movie quote' 
-  game: 
-    title: 'This is my game title' 
-    quote: 'This is my game quote' 
-  timeout: 10000
+    title: '影视单'
+    quote: '“如果再也不能见到你，祝你早安，午安，晚安。”——《楚门的世界》' 
+  #game: 
+    #title: 'This is my game title' 
+    #quote: 'This is my game quote' 
+  #timeout: 10000
 
 search:
   path: search.xml
   field: post
   format: html
   limit: 10000
+
+  # Ice Kano Plus_in
+# Hexo Github Canlendar
+# Author: Ice Kano
+# Modify: Lete乐特
+githubcalendar:
+  enable: true
+  enable_page: /about/
+  user: hem1ock
+  layout:
+    type: id
+    name: recent-posts
+    index: 0
+  githubcalendar_html: '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>'
+  pc_minheight: 280px
+  mobile_minheight: 0px
+  color: "['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f']"
+  #api: https://python-github-calendar-api.vercel.app/api
+  api: https://python-gitee-calendar-api.vercel.app/api
+  calendar_js: https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js
+  plus_style: ""
+
+  abbrlink:
+    alg: crc16   #算法： crc16(default) and crc32
+    rep: hex     #进制： dec(default) and hex: dec #输出进制：十进制和十六进制，默认为10进制。丨dec为十进制，hex为十六进制
+
